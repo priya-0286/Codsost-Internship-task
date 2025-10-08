@@ -1,2 +1,2 @@
-# Codsost-Internship-task
+# Codsoft-Internship-task
 portfolio
