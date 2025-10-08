@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NovaLaunch - Elevate Your Ideas</title>
+  <style>
+    :root {
+      --primary-color: #1e3c72;
+      --secondary-color: #2a5298;
+      --text-color: #1F2937;
+      --bg-color: #F9FAFB;
+      --accent-color: #10B981;
+      --font: 'Segoe UI', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?startup,technology') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .feature {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .feature i {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .cta {
+      background: var(--accent-color);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-radius: 10px;
+    }
+
+    .cta h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta button {
+      background: white;
+      color: var(--accent-color);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta button:hover {
+      background: #e5e7eb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #111827;
+      color: white;
+    }
+
+    footer a {
+      color: var(--accent-color);
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+  <script>
+    // Smooth scroll for nav links
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>NovaLaunch</h1>
+    <p>Launch your ideas to the stratosphere. Fast. Beautiful. Effective.</p>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#cta">Get Started</a>
+      <a href="#footer">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Your next big idea starts here</h2>
+  </div>
+
+  <section id="features">
+    <h2 style="text-align: center;">What We Offer</h2>
+    <div class="features">
+      <div class="feature">
+        <i>🚀</i>
+        <h3>Fast Deployment</h3>
+        <p>Get your product live in minutes, not days.</p>
+      </div>
+      <div class="feature">
+        <i>🎨</i>
+        <h3>Beautiful UI</h3>
+        <p>Stunning design that captures attention.</p>
+      </div>
+      <div class="feature">
+        <i>🔒</i>
+        <h3>Secure & Reliable</h3>
+        <p>Military-grade security and 99.99% uptime.</p>
+      </div>
+      <div class="feature">
+        <i>⚙️</i>
+        <h3>Customizable</h3>
+        <p>Fully flexible to meet your business needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" class="cta">
+    <h3>Ready to launch your dream?</h3>
+    <button onclick="alert('Thank you for your interest!')">Get Started</button>
+  </section>
+
+  <footer id="footer">
+    <p>&copy; 2025 NovaLaunch. All rights reserved.</p>
+    <div>
+      <a href="#">Twitter</a> |
+      <a href="#">LinkedIn</a> |
+      <a href="#">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
